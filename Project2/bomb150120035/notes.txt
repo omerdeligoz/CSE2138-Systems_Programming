@@ -1,0 +1,82 @@
+	Phase 1
+(gdb) x/s 0x555555557150
+0x555555557150: "I can see Russia from my house!"
+
+	Phase 2 
+input should be 6 numbers
+
+A[i] = A[0] + i; 
+x x+1 x+3 x+6 x+10 x+15
+
+	Phase 3
+switch statement
+(gdb) x/s 0x55555555730f
+0x55555555730f: "%d %d"
+first input <= 7
+first input should be 4
+0x0000555555555701 <+132>:   cmp    %eax,0x4(%rsp)
+0x0000555555555705 <+136>:   je     0x55555555570c <phase_3+143>
+second input should equal to %eax
+%rax is now 0 so second input should be 0
+
+	Phase 4
+(gdb) x/s 0x55555555730f
+0x55555555730f: "%d %d"
+
+recursive function. rax should 4
+
+	Phase 5
+input length must be 6
+characters are encrypted
+sum of characters must equal to 56
+first test with abcdef result is 54
+just replaced c with g 
+result is now 54+2 = 56 
+a	10
+b	6
+c	1
+d	12
+e	16
+f	9
+g	3
+
+	Phase 6
+	Address		node		val		next address
+0x555555559210	node1		2f2		0x555555559220
+0x555555559220	node2		2db		0x555555559230
+0x555555559230	node3		292		0x555555559240
+0x555555559240	node4		278		0x555555559250
+0x555555559250	node5		1f1		0x555555559110
+0x555555559110	node6		3e8		0
+
+
+ordered larger to smaller
+node6	3e8
+node1	2f2
+node2	2db
+node3	292
+node4	278
+node5	1f1
+
+
+Secret Phase
+x/s 0x555555557359 -> "%d %d %s"
+x/s 0x555555557362 -> DrEvil
+			24
+	8				32
+6		16		2d		6b
+
+
+			  24
+			 /  \
+		    /    \
+		   8	 32
+          / \   /  \
+	     6	16 2d  6b
+		 
+I can see Russia from my house!
+1 2 4 7 11 16
+4 0
+2 4 "DrEvil 107"
+abgdef
+6 1 2 3 4 5
